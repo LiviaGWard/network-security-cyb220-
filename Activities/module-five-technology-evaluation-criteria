@@ -1,0 +1,58 @@
+# Module Five: Technology Evaluation Criteria Worksheet
+**CYB-220 | Network Security**
+
+## Objective
+Evaluate network security technologies against structured criteria for a financial institution scenario. This worksheet develops a systematic approach to technology selection — a core skill for security analysts and risk managers.
+
+---
+
+## Organization Profile
+- **Type:** Financial institution (20+ years in operation)
+- **Size:** 150–200 employees, 75+ clients
+- **Network:** 4 segments — Sales, Acquisitions, HR, IT (restricted inter-segment access)
+- **IT Team:** 5 members (including 2 recent graduates)
+- **Risk Tolerance:** Moderate to high — prime target for cyber threats; unauthorized access attempts already recorded
+- **Constraints:** Budget limitations; minimal operational disruption required
+
+---
+
+## Evaluation Criteria Framework
+
+### Factor 1: Effectiveness
+
+| Criteria | Manager Questions | Organizational Relevance |
+|---|---|---|
+| Identify network-connected systems | Can it map all devices on our 4-segment network? | Essential for asset inventory and attack surface awareness |
+| Discern OS of connected systems | Can it detect OS versions for patch management? | Moderate-to-high concern — unpatched systems are primary attack vectors |
+| Identify specific applications by data flow | Can it detect unauthorized applications exfiltrating data? | High concern — financial data exfiltration through unauthorized apps is a primary threat |
+
+### Factor 2: Encrypted Malicious Traffic Detection
+High concern — encrypted traffic can conceal malware C2 communications and data exfiltration. The evaluated technology must have signature or anomaly-based detection that works even when traffic is partially encrypted.
+
+### Factor 3: Cost & Staffing Fit
+- Budget limitations rule out expensive commercial solutions requiring large licensing fees
+- Small IT team (5 members) requires a tool that doesn't demand constant high-level configuration
+- Open-source solutions (Snort, Suricata) evaluated as strong candidates
+
+---
+
+## Evaluation Outcome
+Based on this structured criteria evaluation, a **Network-Based IDS (NIDS)** using open-source tools was selected as the recommended solution.
+
+See [Project Three](../projects/project-three-nids-recommendation.md) for the full recommendation and rationale.
+
+---
+
+## Why Structured Evaluation Matters
+Choosing security tools without a framework leads to:
+- Buying solutions that don't fit the organization's actual risk profile
+- Over-spending on capabilities that aren't needed
+- Under-protecting against the threats that actually matter
+- Burdening a small team with tools they can't maintain
+
+A structured evaluation ensures the chosen technology fits the organization — not just a vendor's sales pitch.
+
+---
+
+## Skills Demonstrated
+`Security Technology Evaluation` `Organizational Risk Analysis` `Structured Decision Framework` `Financial Sector Security` `NIDS/IPS Comparison` `Budget-Constrained Security Planning`
