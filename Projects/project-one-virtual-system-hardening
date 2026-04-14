@@ -1,0 +1,69 @@
+# Project One: Virtual System Hardening
+**CYB-220 | Network Security | Grade: A**
+
+## Objective
+Harden a Windows virtual machine in GNS3 by configuring a series of system-level security settings — covering authentication, auditing, user rights, network access, and firewall policy.
+
+---
+
+## Hardening Steps Completed
+
+### 1. User Account Control (UAC) Configuration
+Modified Windows UAC prompt behavior to ensure elevation requests are always visible and require explicit user confirmation. UAC prevents unauthorized privilege escalation by requiring admin approval for system-level changes.
+
+**Security value:** Stops malware and unauthorized users from silently elevating privileges without user awareness.
+
+---
+
+### 2. Local Password Policy
+Configured password policy settings including:
+- Minimum password length
+- Complexity requirements (uppercase, lowercase, numbers, special characters)
+- Maximum password age (expiration)
+- Password history (prevent reuse)
+
+**Security value:** Strong password policies directly reduce the risk of brute-force and credential-stuffing attacks.
+
+---
+
+### 3. Desktop Background User Rights (Non-Admin Restriction)
+Disabled the ability for non-administrative users to change the desktop background. While seemingly minor, this setting is part of a broader principle: **users should not be able to modify system appearance or settings** that could be used for social engineering (e.g., impersonating a login screen).
+
+---
+
+### 4. Local Audit Policy Configuration
+Configured audit policy to log key security events including:
+- Logon/logoff events
+- Privilege use
+- Object access
+- Policy changes
+
+**Security value:** Audit logs are the foundation of incident detection and forensic investigation. Without logging, there is no visibility into what happened during or after a security incident.
+
+---
+
+### 5. Default Logon Banner
+Configured a logon warning banner requiring direct user affirmation before proceeding. This serves both legal and security purposes:
+- Notifies users they are accessing a monitored system
+- Establishes legal standing for monitoring and enforcement
+- Deters unauthorized access attempts
+
+---
+
+### 6. Windows Firewall Profile
+Changed the default Windows Firewall profile to enforce appropriate inbound/outbound rules for the system's network environment. Proper firewall profiles ensure the system applies the right level of restriction based on whether it's on a domain, private, or public network.
+
+---
+
+### 7. Network Configuration (Router & Kiosk PCs)
+Configured router settings and assigned correct IP addresses and gateway settings to kiosk PCs (PC1Kiosk, PC2Kiosk, PC3Kiosk) and admin workstations. Verified network connectivity across all configured devices.
+
+---
+
+## Key Takeaway
+System hardening is not a single action — it is a layered process. Each setting closes a specific attack vector. Together, UAC, password policy, audit logging, logon banners, and firewall rules create a significantly more resilient system than default Windows configurations provide.
+
+---
+
+## Skills Demonstrated
+`Windows Hardening` `UAC Configuration` `Password Policy` `Audit Logging` `Logon Banner` `Windows Firewall` `GNS3` `Virtual Machine Administration` `Network Configuration`
